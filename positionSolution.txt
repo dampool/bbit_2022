@@ -1,0 +1,42 @@
+#Uncomment line above & run cell to save solution
+#TODO Define class that implements positionInterface & allows for the management of a position
+
+from securitySolution import security
+from securitySolution import securityInterface
+
+class positionInterface():
+    def __init__(self, security, initialPosition: int) -> None:
+        pass
+
+    def getSecurity(self) -> securityInterface:
+        pass
+
+    def getPosition(self) -> int:
+        pass
+    
+    def setPosition(self, inputValue: int) -> None:
+        pass
+    
+    def addPosition(self, inputValue: int) -> None:
+        pass
+    
+
+class position():
+    def __init__(self, security_input, positionValue:int):
+        if isinstance(security_input, str):
+            self.security = security(security_input)
+        else:
+            self.security = security_input
+            
+        
+        self.positionValue = positionValue
+    def getPosition(self):
+        return self.positionValue
+    def getSecurity(self):
+        return self.security
+    def setPosition(self, value:int):
+        self.value = value
+    def addPosition(self, value:int):
+        self.value = value
+        
+        
